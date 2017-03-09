@@ -10,19 +10,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../client'));
 
-app.get('/reddit/get', function(req, res) {
-  console.log('reddit res:', res);
-  res.send('Hello Reddit!');
-});
-
-app.get('/yt/get', function(req, res) {
-  console.log('yt res:', res);
-  res.send('Hello Youtube!');
-});
-
-app.get('/ign/get', function(req, res) {
-  console.log('ign res:', res);
-  res.send('Hello IGN!');
+app.get('/', function(req, res) {
+  console.log('res:', res);
+  res.send('Hello Database!');
 });
 
 app.listen(9001, function() {
