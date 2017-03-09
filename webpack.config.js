@@ -1,29 +1,29 @@
 var config = {
-   entry: './main.js',
+  entry: './client/index.js',
 	
-   output: {
-      path:'/',
-      filename: 'index.js',
+  output: {
+     path: '/',
+     filename: 'index.js',
    },
 	
-   devServer: {
-      inline: true,
-      port: 8080
+  devServer: {
+     inline: true,
+     port: 8080
    },
 	
-   module: {
-      loaders: [
-         {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
+  module: {
+     loaders: [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
 				
-            query: {
-               presets: ['env', 'react']
+          query: {
+              presets: ['env', 'react']
             }
-         }
+        }
       ]
    }
-}
+};
 
 module.exports = config;
