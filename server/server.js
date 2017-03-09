@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client'));
 
 app.get('/', function(req, res) {
-  res.send('Hello world!');
+  console.log('res:', res);
+  res.send('Hello Database!');
 });
 
 app.listen(9001, function() {
