@@ -1,6 +1,7 @@
 import React from 'react';
 
 const YoutubeVideo = ({ video }) => {
+  console.log('hi');
   if (!video) {
     return <div>Loading...</div>;
   }
