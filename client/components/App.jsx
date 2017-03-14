@@ -1,8 +1,15 @@
 import React from 'react';
+import YoutubeTile from './Youtube/YoutubeTile.jsx';
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {};
+  }
+
+  
   // constructor() {
   //   super();
   //   this.state = {
@@ -17,6 +24,7 @@ class App extends React.Component {
           {/*<ignTile />
           <redditTile />
           <youtubeTile />*/}
+          <YoutubeTile/>
         </div>
     );
   }
