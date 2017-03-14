@@ -6,3 +6,5 @@ let searchReddit = function (game) {
     .then((data) => data)
     .catch((err) => console.log('error retrieving from Reddit: ', err));
 };
+
+module.exports = searchReddit;
