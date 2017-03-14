@@ -1,29 +1,31 @@
+const path = require('path');
+
 var config = {
-  entry: './client/index.js',
+  entry: path.join(__dirname, './client/index.js'),
 	
   output: {
-     path: '/',
-     filename: 'index.js',
-   },
+    path: path.join(__dirname, 'bundles'),
+    filename: 'bundle.js',
+  },
 	
-  devServer: {
-     inline: true,
-     port: 8080
-   },
+  // devServer: {
+  //   inline: true,
+  //   port: 8080
+  // }, tabbed this out to see if we can get this running on our actual server
 	
   module: {
-     loaders: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
 				
-          query: {
-              presets: ['env', 'react']
-            }
+        query: {
+          presets: ['env', 'react']
         }
-      ]
-   }
+      }
+    ]
+  }
 };
 
 module.exports = config;
