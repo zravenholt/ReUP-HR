@@ -1,12 +1,7 @@
 import React from 'react';
 import YoutubeTile from './Youtube/YoutubeTile.jsx';
-<<<<<<< HEAD
 import Feed from '../containers/Feed.jsx';
 import Home from './Home.jsx';
-=======
-import RedditTile from './Reddit/RedditTile.jsx';
-
->>>>>>> Implement reddit API
 
 class App extends React.Component {
   constructor(props) {
