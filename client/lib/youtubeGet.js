@@ -1,8 +1,7 @@
 import axios from 'axios';
 import keys from '../../config/keys.js';
-import React, { Component } from 'react';
+import React from 'react';
 const game = 'overwatch'; //hardcoded game for now
-
 
 const fetchYoutube = (tile) => {
   axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${game}&type=video&videoCaption=closedCaption&key=${keys.YOUTUBE_API_KEY}`)
