@@ -1,5 +1,6 @@
 import React from 'react';
 import YoutubeTile from './Youtube/YoutubeTile.jsx';
+import RedditTile from './Reddit/RedditTile.jsx';
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
           {/*<ignTile />
           <redditTile />
           <youtubeTile />*/}
+          <RedditTile />
           <YoutubeTile/>
         </div>
     );
