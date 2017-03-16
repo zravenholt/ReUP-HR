@@ -1,6 +1,7 @@
 const path = require('path');
 
 var config = {
+  devtool: 'source-map',
   entry: path.join(__dirname, './client/index.js'),
 	
   output: {
@@ -25,6 +26,13 @@ var config = {
         }
       }
     ]
+  },
+
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 };
 
