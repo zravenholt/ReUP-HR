@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+const  Twitter = require('twitter');
+const axios = require('axios');
+const keys = require ('../config/twitter.js');
 var request = require('request');
 var PORT = process.env.PORT || 9001;
 
@@ -33,6 +36,20 @@ app.get('/giantbomb/get', function(req, res) {
     } else {
       res.send(body);
     }
+  });
+});
+
+const client = new Twitter({
+  consumer_key: keys.TWITTER_API_KEY,
+  consumer_secret: keys.TWITTER_API_SECRET,
+  access_token_key: keys.TWITTER_TOKEN,
+  access_token_secret: keys.TWITTER_TOKEN_SECRET
+});
+
+app.get('/twitter', function(req, res) {
+  client.get('search/tweets', {q: 'overwatch'}, function(error, tweets, response) {
+    if(error) console.log('error in fetching tweets: ', error);
+    res.send(tweets.statuses);
   });
 });
 

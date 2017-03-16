@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import YoutubeVideo from './YoutubeVideo.jsx';
-import fetchYoutube from '../../lib/youtubeGet.js';
+import fetchYoutube from '../../lib/youtube.js';
 
 class YoutubeTile extends Component {
   constructor(props) {
