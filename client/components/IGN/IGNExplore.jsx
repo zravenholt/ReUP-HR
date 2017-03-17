@@ -17,7 +17,7 @@ class IGNExplore extends Component {
 
   render() {
     return (
-      <div> 
+      <div className="Tile"> 
         {this.state.contents.map((content) => 
           <IGNNews content={ content } />
         )}  
