@@ -10,7 +10,7 @@ const YoutubeVideo = ({ video }) => {
   return (
     <div>
       <div>
-        <iframe src={url}></iframe>
+        <iframe src={url} allowFullScreen></iframe>
       </div>
       <div>{video.snippet.title}</div>
       <div>{video.snippet.description}</div>
