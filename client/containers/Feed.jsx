@@ -6,7 +6,7 @@ import TwitterTile from '../components/Twitter/TwitterTile.jsx';
 import TwitchTile from '../components/Twitch/TwitchTile.jsx';
 
 let Feed = ({props}) => (
-  <div className="feedContainer">
+  <div className="mainView pre-scrollable">
     
       <GiantBombTile />
     
