@@ -42,13 +42,18 @@ app.get('/giantbomb/get', function(req, res) {
 const client = new Twitter({
   consumer_key: keys.TWITTER_API_KEY,
   consumer_secret: keys.TWITTER_API_SECRET,
-  access_token_key: keys.TWITTER_TOKEN,
+  access_token_key: keys.TWITTER_ACCESS_TOKEN,
   access_token_secret: keys.TWITTER_TOKEN_SECRET
 });
 
+
+
 app.get('/twitter', function(req, res) {
-  client.get('search/tweets', {q: 'overwatch'}, function(error, tweets, response) {
+  console.log('app.get /twitter', client);
+    client.get('search/tweets', { q: 'from:playoverwatch AND -filter:retweets AND -filter:replies' }, function(error, tweets, response) {
+  // client.get('statuses/user_timeline', { screen_name: 'PlayOverwatch', exclude_replies: true, count: 50 }, function(error, timeline, response) {
     if(error) console.log('error in fetching tweets: ', error);
+    console.log('timeline response:', tweets);
     res.send(tweets.statuses);
   });
 });
