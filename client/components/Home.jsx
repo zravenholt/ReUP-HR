@@ -5,7 +5,7 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      
+      myGames: ['overwatch', 'fifa', 'rocketleague']
     }
   }
 
