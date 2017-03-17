@@ -5,10 +5,13 @@ const RedditPost = (props) => {
   console.log('POST: ', props);
   return (
     <div>
-      <div>{props.data.title}</div>
-      <img src={props.data.thumbnail}/>
-      <div>{props.data.permalink}</div>
-      <div>{props.data.score}</div>
+      <a href={`http://www.reddit.com${props.data.permalink}`}>
+        <div>{props.data.title}</div>
+      </a>
+      <a href={props.data.url}>
+        <img src={props.data.thumbnail}/>
+      </a>
+      <div> ⬆ {props.data.score}</div>
     </div>
   );
 };
