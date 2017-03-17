@@ -37,7 +37,8 @@
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3",
-    "twitter": "^1.7.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "sequelize": "^3.30.2",
+    "twitter": "^1.7.0"
   }
 }

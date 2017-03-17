@@ -42,11 +42,12 @@ app.get('/giantbomb/get', function(req, res) {
 const client = new Twitter({
   consumer_key: keys.TWITTER_API_KEY,
   consumer_secret: keys.TWITTER_API_SECRET,
-  access_token_key: keys.TWITTER_TOKEN,
+  access_token_key: keys.TWITTER_ACCESS_TOKEN,
   access_token_secret: keys.TWITTER_TOKEN_SECRET
 });
 
 app.get('/twitter', function(req, res) {
+  console.log('app.get /twitter', client);
   client.get('search/tweets', {q: 'overwatch'}, function(error, tweets, response) {
     if(error) console.log('error in fetching tweets: ', error);
     res.send(tweets.statuses);
