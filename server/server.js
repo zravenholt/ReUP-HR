@@ -4,12 +4,12 @@ var bodyParser = require('body-parser');
 var path = require('path');
 const Twitter = require('twitter');
 const axios = require('axios');
-const keys = require ('../config/twitter.js');
+const keys = require ('../config/keys.js');
 var request = require('request');
 var PORT = process.env.PORT || 9001;
 
-const GIANT_BOMB_API_KEY = require('../config/giantBombKey.js');
-const GIANT_BOMB_URL = `http://www.giantbomb.com/api/search?api_key=${GIANT_BOMB_API_KEY}&format=json&query="overwatch"&resources=game`;
+// const GIANT_BOMB_API_KEY = require('../config/giantBombKey.js');
+const GIANT_BOMB_URL = `http://www.giantbomb.com/api/search?api_key=${keys.GIANT_BOMB_API_KEY}&format=json&query="overwatch"&resources=game`;
 
 const optionsGB = {
   url: GIANT_BOMB_URL,
@@ -29,7 +29,7 @@ app.use('/bundles', express.static(path.join(__dirname, '../bundles')));
 
 app.get('/giantbomb/get', function(req, res) {
   console.log('Hello world from /giantbomb/get');
-  console.log('GIANT BOMB API KEY:', GIANT_BOMB_API_KEY);
+  console.log('GIANT BOMB API KEY:', keys.GIANT_BOMB_API_KEY);
   request.get(optionsGB, function(error, response, body) {
     if (error) {
       console.log('ERROR GETTING RESPONSE FROM GIANT BOMB\'S API SERVER');
