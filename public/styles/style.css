@@ -13,6 +13,12 @@
   border-radius: 5px;
   border-color: lightblue;
   padding: 25px;
+  width: 75%;
+}
+
+.pre-scrollable {
+    max-height: 600px;
+    overflow-y: scroll;
 }
 
 

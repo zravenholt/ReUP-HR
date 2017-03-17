@@ -22,8 +22,8 @@ class RedditTile extends React.Component {
   render () {
     return (
       <div className="Tile">
-        <div className = 'redditTitle'>Top Reddit Posts</div>
-        <div className = 'redditPosts'>
+        <div className = 'redditTitle'><h3>Top Reddit Posts</h3></div>
+        <div className = 'redditPosts pre-scrollable'>
           {this.state.posts.map((post) => 
             <RedditPost data={post.data}/>
           )}

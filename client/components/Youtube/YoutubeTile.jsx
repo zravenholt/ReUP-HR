@@ -18,9 +18,12 @@ class YoutubeTile extends Component {
   render() {
     return (
       <div className="Tile">
+        <div><h3>Overwatch on Youtube:</h3></div>
+        <div className="pre-scrollable">
         {this.state.videos.map((video) => 
         <YoutubeVideo key={video.id.videoId} video={ video }/>
         )}
+        </div>
       </div>
     );
   }
