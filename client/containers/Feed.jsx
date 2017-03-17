@@ -16,7 +16,7 @@ let Feed = ({props}) => (
     
       <TwitchTile />
     
-      {/*<TwitterTile />*/}
+      <TwitterTile />
     
   </div>
 );

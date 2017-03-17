@@ -1,4 +1,11 @@
+.HomeBar {
+  height: 100vh;
+  width: 20%;
+  background-color: lightgray;
+}
+
 .Tile {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 76%;
