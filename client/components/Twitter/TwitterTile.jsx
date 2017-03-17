@@ -17,7 +17,7 @@ class TwitterTile extends React.Component {
 
   render() {
     return (
-      <div className="Tile">
+      <div className="Tile pre-scrollable">
         {this.state.tweets.map((tweet) => 
           <Tweet key={ tweet.id_str } tweet={ tweet }/>
         )}

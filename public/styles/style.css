@@ -15,5 +15,10 @@
   padding: 25px;
 }
 
+.pre-scrollable {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
 
 
