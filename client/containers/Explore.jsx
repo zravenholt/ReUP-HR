@@ -4,8 +4,7 @@ import PolygonExplore from '../components/Polygon/PolygonExplore.jsx';
 
 const Explore = () => {
   return (
-    <div>
-      <strong>IGN</strong>
+    <div className="exploreContainer">
       <IGNExplore />
       <strong>Polygon</strong>
       <PolygonExplore />

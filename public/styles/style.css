@@ -1,16 +1,19 @@
+
+
+
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 .HomeBar {
-  height: 100vh;
-  width: 20%;
   background-color: lightgray;
 }
 
 .Tile {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 76%;
   border-style: solid;
   border-radius: 5px;
   border-color: lightblue;
   padding: 25px;
 }
+
+
+
