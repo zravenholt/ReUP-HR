@@ -50,10 +50,11 @@ const client = new Twitter({
 
 app.get('/twitter', function(req, res) {
   console.log('app.get /twitter', client);
-  client.get('statuses/user_timeline', { screen_name: 'PlayOverwatch', include_rts: false }, function(error, timeline, response) {
+    client.get('search/tweets', { q: 'from:playoverwatch AND -filter:retweets AND -filter:replies' }, function(error, tweets, response) {
+  // client.get('statuses/user_timeline', { screen_name: 'PlayOverwatch', exclude_replies: true, count: 50 }, function(error, timeline, response) {
     if(error) console.log('error in fetching tweets: ', error);
-    console.log('timeline response:', timeline);
-    res.send(timeline);
+    console.log('timeline response:', tweets);
+    res.send(tweets.statuses);
   });
 });
 
