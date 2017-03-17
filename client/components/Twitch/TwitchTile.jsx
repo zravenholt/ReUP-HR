@@ -18,7 +18,7 @@ class TwitchTile extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Tile">
         {this.state.streams.map((stream) => 
         <TwitchStream key={stream._id} stream={ stream }/>
         )}

@@ -20,16 +20,10 @@ class App extends React.Component {
 
   render() {
     return (
-        <div>
-          Hello World!!!  
-          <Home />
-          <div>
-
-            <div>
-              <Feed />
-            </div>
-          </div>
-        </div>
+      <div className="All">
+        <Home />
+        <Feed />
+      </div>
     );
   }
 }

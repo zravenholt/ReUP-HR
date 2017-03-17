@@ -17,7 +17,7 @@ class YoutubeTile extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Tile">
         {this.state.videos.map((video) => 
         <YoutubeVideo key={video.id.videoId} video={ video }/>
         )}
