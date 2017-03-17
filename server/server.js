@@ -46,11 +46,14 @@ const client = new Twitter({
   access_token_secret: keys.TWITTER_TOKEN_SECRET
 });
 
+
+
 app.get('/twitter', function(req, res) {
   console.log('app.get /twitter', client);
-  client.get('search/tweets', {q: 'overwatch'}, function(error, tweets, response) {
+  client.get('statuses/user_timeline', { screen_name: 'PlayOverwatch', include_rts: false }, function(error, timeline, response) {
     if(error) console.log('error in fetching tweets: ', error);
-    res.send(tweets.statuses);
+    console.log('timeline response:', timeline);
+    res.send(timeline);
   });
 });
 
