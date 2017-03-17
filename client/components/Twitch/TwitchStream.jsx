@@ -8,7 +8,7 @@ const TwitchStream = function({stream}) {
       <iframe
         src={`http://player.twitch.tv/?channel=${stream.channel.name}&autoplay=false`}
         height="480"
-        width="800"
+        width="100%"
         frameBorder="0"
         scrolling="no"
         allowFullScreen="true">
