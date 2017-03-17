@@ -17,7 +17,7 @@ class TwitterTile extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Tile">
         {this.state.tweets.map((tweet) => 
           <Tweet key={ tweet.id_str } tweet={ tweet }/>
         )}

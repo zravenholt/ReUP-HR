@@ -6,22 +6,18 @@ import TwitterTile from '../components/Twitter/TwitterTile.jsx';
 import TwitchTile from '../components/Twitch/TwitchTile.jsx';
 
 let Feed = ({props}) => (
-  <div>
-    <div>
+  <div className="feedContainer">
+    
       <GiantBombTile />
-    </div>
-    <div>
+    
       <YoutubeTile />
-    </div>
-    <div>
+    
       <RedditTile />
-    </div>
-    <div>
+    
       <TwitchTile />
-    </div>
-    <div>
+    
       <TwitterTile />
-    </div>
+    
   </div>
 );
 

@@ -4,7 +4,7 @@ import keys from '../../config/keys.js';
 
 var game = 'overwatch'
 
-const url = `https://api.twitch.tv/kraken/search/streams?query=${game}&limit=5`;
+const url = `https://api.twitch.tv/kraken/search/streams?query=${game}&limit=1`;
 
 const options = {
   headers: {

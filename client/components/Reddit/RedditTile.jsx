@@ -21,7 +21,7 @@ class RedditTile extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="Tile">
         <div className = 'redditTitle'>Top Reddit Posts</div>
         <div className = 'redditPosts'>
           {this.state.posts.map((post) => 
