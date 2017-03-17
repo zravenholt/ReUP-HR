@@ -12,9 +12,9 @@ class Home extends React.Component {
   render() {
     
     return (
-      <div className="home-bar">
+      <div className="HomeBar">
         <h1>Our App</h1>
-        <div className="user">
+        <div className="User">
           {/*stuff*/}
         </div>
         <div className="base-navigation">
