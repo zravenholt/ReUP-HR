@@ -17,7 +17,7 @@ class YoutubeTile extends Component {
 
   render() {
     return (
-      <div className="Tile">
+      <div className="YoutubeTile">
         <h3>Overwatch on Youtube:</h3>
         <div className="pre-scrollable">
         {this.state.videos.map((video) => 
