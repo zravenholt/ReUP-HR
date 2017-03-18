@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import keys from '../../../config/keys.js';
 import GiantBombInfo from './GiantBombInfo.jsx';
-const query = 'overwatch';
+import fetchGiantBomb from '../../lib/giantBomb.js';
 
 class GiantBombTile extends Component {
   constructor(props) {
@@ -15,13 +14,7 @@ class GiantBombTile extends Component {
   }
 
   componentDidMount() {
-    axios.get('/giantbomb/get', { params: { gameName: 'overwatch' } })
-      .then((response) => {
-        this.setState({ gameInfo: response.data.results[0] });
-        this.setState({ gameImages: response.data.results[0].image });
-      }).catch((err) => {
-        console.log(`Error fetching Giant Bomb data: ${err}`);
-      });
+    fetchGiantBomb(this, 'overwatch');
   }
 
   render() {
