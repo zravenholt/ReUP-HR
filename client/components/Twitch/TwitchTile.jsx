@@ -18,12 +18,14 @@ class TwitchTile extends Component {
 
   render() {
     return (
+      <div className="row">
         <div className="TwitchTile">
           <h3>Twitch Stream of the Day:</h3>
           {this.state.streams.map((stream) => 
           <TwitchStream key={stream._id} stream={ stream }/>
           )}
         </div>
+      </div>
     );
   }
 }
