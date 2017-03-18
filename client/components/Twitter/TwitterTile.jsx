@@ -12,7 +12,7 @@ class TwitterTile extends React.Component {
   }
 
   componentDidMount() {
-    fetchTweets(this);
+    fetchTweets(this, 'playoverwatch');
   }
 
   render() {

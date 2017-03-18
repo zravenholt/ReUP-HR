@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-const fetchTweets = (tile) => {
-  axios.get('/twitter')
+const fetchTweets = (tile, twitterHandle) => {
+  axios.get('/twitter', { params: { twitterHandle: twitterHandle } })
     .then((response) => {
       tile.setState({
         tweets: tile.state.tweets.concat(response.data)
