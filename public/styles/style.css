@@ -3,23 +3,70 @@
 
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
-.HomeBar {
-  background-color: lightgray;
+.navbar-fixed-left {
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
 }
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*.mainView {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+}*/
+
+.pre-scrollable {
+  max-height: 100%;
+}
+
+/*.HomeBar {
+  height: 100vh;
+  background-color: lightgray;
+}*/
 
 .Tile {
   position: relative;
-  border-style: solid;
+  border-style: dotted;
   border-radius: 5px;
   border-color: lightblue;
   padding: 25px;
-  width: 75%;
+  margin: 3%;
+  height: 400px;
 }
 
+.TwitchTile {
+  position: relative;
+  border-style: dotted;
+  border-radius: 5px;
+  border-color: lightblue;
+  padding: 25px;
+  margin: 3%;
+  height: 100%;
+}
+
+.leftmostOfTile {
+  float: left;
+  height: 300px;
+  margin-right: 10px;
+  
+}
+
+/*
 .pre-scrollable {
     max-height: 600px;
     overflow-y: scroll;
-}
+}*/
 
 
 

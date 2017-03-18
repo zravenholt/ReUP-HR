@@ -20,7 +20,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-sm-2 col-md-2 col-lg-2">
             <Home />
