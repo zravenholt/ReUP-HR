@@ -15,7 +15,7 @@ class GiantBombTile extends Component {
   }
 
   componentDidMount() {
-    axios.get('/giantbomb/get')
+    axios.get('/giantbomb/get', { params: { 'query': 'overwatch' } })
       .then((response) => {
         this.setState({ gameInfo: response.data.results[0] });
         this.setState({ gameImages: response.data.results[0].image });

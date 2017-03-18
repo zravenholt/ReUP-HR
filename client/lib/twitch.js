@@ -2,9 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import keys from '../../config/keys.js';
 
-var game = 'overwatch'
-
-const url = `https://api.twitch.tv/kraken/search/streams?query=${game}&limit=1`;
+// var game = 'overwatch'
 
 const options = {
   headers: {
@@ -12,7 +10,8 @@ const options = {
   }
 };
 
-const fetchTwitch = function(tile) {
+const fetchTwitch = function(tile, gameName) {
+  const url = `https://api.twitch.tv/kraken/search/streams?query=${gameName}&limit=1`;
   axios.get(url, options)
     .then((response) => {
       tile.setState({
