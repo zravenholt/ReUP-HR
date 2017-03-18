@@ -1,8 +1,8 @@
 import React from 'react';
 
 const RedditPost = (props) => {
-  console.log('IN REDDIT POST');
-  console.log('POST: ', props);
+  // console.log('IN REDDIT POST');
+  // console.log('POST: ', props);
   return (
     <div>
       <a href={`http://www.reddit.com${props.data.permalink}`}>
