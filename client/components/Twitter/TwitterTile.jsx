@@ -18,8 +18,8 @@ class TwitterTile extends React.Component {
   render() {
     return (
       <div className="Tile">
-        <div><h3>Overwatch Twitter Posts:</h3></div>
-        <div className="pre-scrollable">
+        <h3>Overwatch Twitter Posts:</h3>
+        <div className="pre-scrollable"> 
         {this.state.tweets.map((tweet) => 
           <Tweet key={ tweet.id_str } tweet={ tweet }/>
         )}
