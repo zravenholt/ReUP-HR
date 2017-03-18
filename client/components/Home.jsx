@@ -15,7 +15,7 @@ class Home extends React.Component {
       <div className="navbar navbar-inverse navbar-fixed-left">
         <div className="Logo">
           <img src="http://img00.deviantart.net/d3c6/i/2012/027/a/7/8_bit_1up_mushroom_by_nathanmarino-d4nt2xp.png" />
-          <h2>ReUp</h2>
+          <h2 className="Title">ReUp</h2>
         </div>
         <div className="User">
           {/*stuff*/}
