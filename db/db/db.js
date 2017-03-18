@@ -30,7 +30,12 @@ module.exports = function(sequelize, DataTypes) {
 };
 
 var Game = db.define('Game', {
-  gameName: Sequelize.STRING
+  gameName: Sequelize.STRING,
+  giantBombName: Sequelize.STRING,
+  subRedditName: Sequelize.STRING,
+  twitchQuery: Sequelize.STRING,
+  youtubeChannelId: Sequelize.STRING,
+  twitterName: Sequelize.STRING
 });
 
 // JOIN TABLE

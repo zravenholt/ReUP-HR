@@ -8,15 +8,8 @@ const keys = require ('../config/keys.js');
 var request = require('request');
 var PORT = process.env.PORT || 9001;
 
-// const GIANT_BOMB_API_KEY = require('../config/giantBombKey.js');
-const GIANT_BOMB_URL = `http://www.giantbomb.com/api/search?api_key=${keys.GIANT_BOMB_API_KEY}&format=json&query="overwatch"&resources=game`;
-
-const optionsGB = {
-  url: GIANT_BOMB_URL,
-  headers: {
-    'User-Agent': 'ReUPServer'
-  }
-};
+// const giantBombName = 'overwatch';
+// const twitterName = 'playoverwatch';
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,8 +21,15 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/bundles', express.static(path.join(__dirname, '../bundles')));
 
 app.get('/giantbomb/get', function(req, res) {
-  console.log('Hello world from /giantbomb/get');
-  console.log('GIANT BOMB API KEY:', keys.GIANT_BOMB_API_KEY);
+  const GIANT_BOMB_URL = `http://www.giantbomb.com/api/search?api_key=${keys.GIANT_BOMB_API_KEY}&format=json&query=${req.query.gameName}&resources=game`;
+
+  const optionsGB = {
+    url: GIANT_BOMB_URL,
+    headers: {
+      'User-Agent': 'ReUPServer'
+    }
+  };
+
   request.get(optionsGB, function(error, response, body) {
     if (error) {
       console.log('ERROR GETTING RESPONSE FROM GIANT BOMB\'S API SERVER');
@@ -46,14 +46,9 @@ const client = new Twitter({
   access_token_secret: keys.TWITTER_TOKEN_SECRET
 });
 
-
-
 app.get('/twitter', function(req, res) {
-  console.log('app.get /twitter', client);
-    client.get('search/tweets', { q: 'from:playoverwatch AND -filter:retweets AND -filter:replies' }, function(error, tweets, response) {
-  // client.get('statuses/user_timeline', { screen_name: 'PlayOverwatch', exclude_replies: true, count: 50 }, function(error, timeline, response) {
+  client.get('search/tweets', { q: `from:${req.query.twitterHandle} AND -filter:retweets AND -filter:replies` }, function(error, tweets, response) {
     if(error) console.log('error in fetching tweets: ', error);
-    console.log('timeline response:', tweets);
     res.send(tweets.statuses);
   });
 });
