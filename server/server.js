@@ -6,6 +6,7 @@ const Twitter = require('twitter');
 const axios = require('axios');
 const keys = require ('../config/keys.js');
 var request = require('request');
+var db = require('../db/db/db.js');
 var PORT = process.env.PORT || 9001;
 
 // const giantBombName = 'overwatch';

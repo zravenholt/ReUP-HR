@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/server.js",
-    "build:watch": "webpack --watch"
+    "build:watch": "webpack --watch",
+    "create:db": "mysql -u root < ./db/createdb.sql"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "react-redux": "^5.0.3",
+    "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3",
     "request": "^2.81.0",
