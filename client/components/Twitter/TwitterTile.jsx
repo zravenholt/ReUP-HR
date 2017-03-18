@@ -17,7 +17,7 @@ class TwitterTile extends React.Component {
 
   render() {
     return (
-      <div className="Tile">
+      <div className="Tile row">
         <h3>Overwatch Twitter Posts:</h3>
         <div className="pre-scrollable"> 
         {this.state.tweets.map((tweet) => 
