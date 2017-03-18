@@ -50,6 +50,14 @@ User.sync();
 Game.sync();
 Favorites.sync();
 
+Game.findOrCreate({where: {gameName: 'Overwatch'}, defaults: {
+  giantBombName: 'overwatch',
+  subRedditName: 'Overwatch',
+  twitchQuery: 'overwatch',
+  youtubeChannelId: 'UClOf1XXinvZsy4wKPAkro2A',
+  twitterName: 'playoverwatch'
+}});
+
 module.exports.User = User;
 module.exports.Game = Game;
 module.exports.Favorites = Favorites;
