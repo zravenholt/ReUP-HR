@@ -10,6 +10,10 @@
   height: 100%;
 }
 
+.Logo {
+  text-align: center;
+}
+
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
@@ -30,10 +34,14 @@ img {
   max-height: 100%;
 }
 
-/*.HomeBar {
-  height: 100vh;
-  background-color: lightgray;
-}*/
+h3 {
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.3);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
 
 .Tile {
   position: relative;
@@ -43,6 +51,7 @@ img {
   padding: 25px;
   margin: 3%;
   height: 400px;
+  overflow-y: hidden;
 }
 
 .TwitchTile {
@@ -53,6 +62,7 @@ img {
   padding: 25px;
   margin: 3%;
   height: 100%;
+  overflow-y: hidden;
 }
 
 .leftmostOfTile {
@@ -61,12 +71,3 @@ img {
   margin-right: 10px;
   
 }
-
-/*
-.pre-scrollable {
-    max-height: 600px;
-    overflow-y: scroll;
-}*/
-
-
-
