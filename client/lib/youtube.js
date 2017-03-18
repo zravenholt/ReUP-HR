@@ -1,10 +1,9 @@
 import axios from 'axios';
 import keys from '../../config/keys.js';
 import React from 'react';
-const game = 'overwatch'; //hardcoded game for now
-const channelId = 'UClOf1XXinvZsy4wKPAkro2A';
+// const game = 'overwatch'; //hardcoded game for now
 
-const fetchYoutube = (tile) => {
+const fetchYoutube = (tile, channelId) => {
   axios.get(`https://www.googleapis.com/youtube/v3/search?maxResults=1&key=${keys.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`)
     .then((response) => {
       tile.setState ({
