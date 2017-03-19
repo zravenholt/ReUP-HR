@@ -4,9 +4,8 @@ import PolygonExplore from '../components/Polygon/PolygonExplore.jsx';
 
 const Explore = () => {
   return (
-    <div className="mainView pre-scrollable">
+    <div>
       <IGNExplore />
-      <strong>Polygon</strong>
       <PolygonExplore />
     </div>
   );

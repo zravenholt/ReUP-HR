@@ -17,12 +17,12 @@ class App extends React.Component {
           <div className="col-sm-2 col-md-2 col-lg-2">
             <Home />
           </div>
-          {/*<div className="col-sm-10 col-md-10 col-lg-10">
-            <Explore />
-          </div>*/}
           <div className="col-sm-10 col-md-10 col-lg-10">
-            <Feed />
+            <Explore />
           </div>
+          {/*<div className="col-sm-10 col-md-10 col-lg-10">
+            <Feed />
+          </div>*/}
         </div>
       </div>
     );
