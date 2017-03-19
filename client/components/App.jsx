@@ -10,16 +10,6 @@ class App extends React.Component {
     this.state = {};
   }
 
-  
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //   };
-  // }
-  //arglebargle
-
-
-
   render() {
     return (
       <div className="container-fluid">

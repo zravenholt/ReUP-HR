@@ -1,16 +1,20 @@
 import React from 'react';
+import dbQuery from '../lib/dbQuery.js';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      myGames: ['overwatch', 'fifa', 'rocketleague']
+      myGames: []
     }
   }
 
-  render() {
-    
+  componentDidMount () {
+    dbQuery(this, 'overwatch');
+  }
+
+  render() {    
     return (
       <div className="navbar navbar-inverse navbar-fixed-left">
         <div className="Logo">
