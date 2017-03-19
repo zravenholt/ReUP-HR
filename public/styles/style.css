@@ -116,3 +116,18 @@ h3 {
   margin-right: 10px;
   
 }
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  color: #333;
+}
+
+.slick-next {
+  background: #337ab7
+}
+
+.slick-prev {
+  background: #337ab7
+}

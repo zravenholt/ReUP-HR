@@ -2,7 +2,7 @@ import React from 'react';
 
 const PolygonNews = ({ content }) => {
   return (
-    <div>
+    <div className='container'>
       <div>{ content.author }</div>
       <div>{ content.title }</div>
       <div>{ content.description }</div>
