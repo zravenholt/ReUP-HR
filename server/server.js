@@ -55,9 +55,6 @@ app.get('/twitter', function(req, res) {
 });
 
 app.get('/games/get', function(req, res) {
-
-  console.log('req.query.gameName for /games/get:', req.query.gameName);
-  console.log('db.Game?:', db.Game);
   db.Game.findAll().then(function(games) {
     var gamesList = JSON.parse(JSON.stringify(games));  // converts SQL instance to JSON object
     console.log('GOT GAMES FROM DATABASE:', gamesList);
