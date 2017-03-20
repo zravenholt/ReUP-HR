@@ -3,9 +3,9 @@ import Home from './Home.jsx';
 import Explore from '../containers/Explore.jsx';
 import Feed from '../containers/Feed.jsx';
 import {
-  BrowserRouter as Router,
-  IndexRoute,
-  Route
+  HashRouter as Router,
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 class App extends React.Component {
@@ -24,6 +24,7 @@ class App extends React.Component {
               <Home />
             </div>
             <div className="col-sm-10 col-md-10 col-lg-10">
+              <Redirect from="/" to="/explore" />
               <Route path="/explore" component={Explore} />
               <Route path="/feed" component={Feed} />
             </div>
