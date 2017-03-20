@@ -62,6 +62,7 @@ app.get('/games/get', function(req, res) {
   }).error(function(err) {
     console.log('CANNOT GET GAMES FROM DATABASE DUE TO:', err);
   });
+
 });
 
 app.post('/games/post', function(req, res) {
