@@ -2,7 +2,7 @@ import React from 'react';
 
 const Tweet = ({ tweet }) => {
   return (
-    <div>
+    <div className="Post">
       <a href={tweet.entities.urls[0].url}>
         <div>{ tweet.user['screen_name'] }</div>
       </a>

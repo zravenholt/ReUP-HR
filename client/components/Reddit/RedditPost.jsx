@@ -9,7 +9,7 @@ const RedditPost = (props) => {
   }
 
   return (
-    <div>
+    <div className="Post">
       <a href={`http://www.reddit.com${props.data.permalink}`}>
         <div>{props.data.title}</div>
       </a>

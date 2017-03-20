@@ -29,17 +29,16 @@ img {
   max-width: 100%;
 }
 
-/*.mainView {
-  position: fixed;
-  height: 100%;
-  overflow-y: scroll;
-}*/
-
 .pre-scrollable {
   max-height: 100%;
 }
 
+.postScroller {
+  max-height: 90%;
+}
+
 h3 {
+  margin-top: 0px;
   background-color: #565656;
   color: transparent;
   text-shadow: 0px 2px 3px rgba(255,255,255,0.3);
@@ -48,19 +47,25 @@ h3 {
           background-clip: text;
 }
 
-.Tile {
-  margin-top: 0;
-  position: relative;
+.GiantBombTile {
+  /*margin-top: 0;*/
+  /*position: relative;*/
   border-style: dotted;
   border-radius: 5px;
   border-color: darkcyan;
   padding: 25px;
   margin: 2%;
-  height: 400px;
+  height: 250px;
   overflow-y: hidden;
 }
 
-.YoutubeTile {
+.leftmostOfTile {
+  float: left;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.TwitterTile {
   float: left;
   /*position: relative;*/
   border-style: dotted;
@@ -69,7 +74,7 @@ h3 {
   padding: 25px;
   margin: 2%;
   height: 75vh;
-  width: 45%;
+  width: 46%;
   overflow-y: hidden;
 }
 
@@ -82,19 +87,25 @@ h3 {
   padding: 25px;
   margin: 2%;
   height: 75vh;
-  width: 45%;
+  width: 46%;
   overflow-y: hidden;
 }
 
-.GiantBombTile {
+.Post {
+  border-style: solid;
+  border-color: darkcyan;
+  background-color: lightcyan;
+}
+
+.YoutubeTile {
   margin-top: 0;
   position: relative;
   border-style: dotted;
   border-radius: 5px;
   border-color: darkcyan;
   padding: 25px;
-  margin: 3%;
-  height: 250px;
+  margin: 2%;
+  height: 400px;
   overflow-y: hidden;
 }
 
@@ -106,16 +117,9 @@ h3 {
   border-color: darkcyan;
   padding: 25px;
   margin: 2%;
-  width: 90%;
+  width: 96%;
   height: 100%;
   /*overflow-y: hidden;*/
-}
-
-.leftmostOfTile {
-  float: left;
-  height: 300px;
-  margin-right: 10px;
-  
 }
 
 .container {
