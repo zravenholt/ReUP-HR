@@ -23,6 +23,14 @@ class App extends React.Component {
 
     this.changeGame = this.changeGame.bind(this);
 
+    // this.feedWrapper = React.createClass({
+    //   render: function () {
+    //     return (
+    //       <Feed game={this.state.currentGame} />
+    //     )
+    //   }
+    // })
+
   }
 
   componentDidMount () {
@@ -35,6 +43,8 @@ class App extends React.Component {
     })
   }
 
+
+
   render() {
     return (
       <Router>
@@ -46,7 +56,7 @@ class App extends React.Component {
             <div className="col-sm-10 col-md-10 col-lg-10">
               <Redirect from="/" to="/explore" />
               <Route path="/explore" component={Explore} />
-              <Route path="/feed" component={Feed} />
+              <Route path="/feed" component={() => (<Feed game={this.state.currentGame}/>)} />
               <Route path="/addgame" component={AddGame} />
             </div>
           </div>
@@ -57,3 +67,7 @@ class App extends React.Component {
 }
 
 export default App;
+
+// game={this.state.currentGame} 
+
+/*handler={this.feedWrapper}*/

@@ -14,7 +14,7 @@ class GiantBombTile extends Component {
   }
 
   componentDidMount() {
-    fetchGiantBomb(this, 'overwatch');
+    fetchGiantBomb(this, this.props.giantBombName);
   }
 
   render() {

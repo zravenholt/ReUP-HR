@@ -12,7 +12,7 @@ class YoutubeTile extends Component {
   }
 
   componentDidMount() {
-    fetchYoutube(this, 'UClOf1XXinvZsy4wKPAkro2A');
+    fetchYoutube(this, this.props.youtubeChannelId);
   }
 
   render() {

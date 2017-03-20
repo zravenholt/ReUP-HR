@@ -5,18 +5,18 @@ import RedditTile from '../components/Reddit/RedditTile.jsx';
 import TwitterTile from '../components/Twitter/TwitterTile.jsx';
 import TwitchTile from '../components/Twitch/TwitchTile.jsx';
 
-let Feed = ({props}) => (
+let Feed = (props) => (
   <div className="mainView pre-scrollable">
     
-      <GiantBombTile />
+      <GiantBombTile giantBombName={props.game.giantBombName}/>
     
-      <YoutubeTile />
+      <YoutubeTile youtubeChannelId={props.game.youtubeChannelId}/>
     
-      <RedditTile />
+      <RedditTile subRedditName={props.game.subRedditName}/>
     
-      <TwitchTile />
+      <TwitchTile twitchQuery={props.game.twitchQuery}/>
     
-      <TwitterTile />
+      <TwitterTile twitterName={props.game.twitterName}/>
     
   </div>
 );
