@@ -13,7 +13,7 @@ class TwitchTile extends Component {
   }
 
   componentDidMount() {
-    fetchTwitch(this, 'overwatch');
+    fetchTwitch(this, this.props.twitchQuery);
   }
 
   render() {
