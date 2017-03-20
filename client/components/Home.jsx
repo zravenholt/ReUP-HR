@@ -10,7 +10,7 @@ class Home extends React.Component {
     }
   }
   componentDidMount () {
-    dbQuery(this, 'overwatch');
+    dbQuery(this);
   }
   render() {    
     return (
@@ -23,8 +23,8 @@ class Home extends React.Component {
         </div>
         <div className="base-navigation">
           <ul>
-            <li><Link to='/explore'>Explore</Link></li>
-            <li><Link to='/feed'>Overwatch</Link></li>
+            <li><Link to='explore'>Explore</Link></li>
+            <li><Link to='feed'>Overwatch</Link></li>
           </ul>
         </div>
       </div>
