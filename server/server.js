@@ -62,7 +62,23 @@ app.get('/games/get', function(req, res) {
   }).error(function(err) {
     console.log('CANNOT GET GAMES FROM DATABASE DUE TO:', err);
   });
+});
 
+app.post('/games/post', function(req, res) {
+  db.Game.findOrCreate({where: {gameName: req.body.gameName}, defaults: {
+    giantBombName: req.body.giantBombName,
+    subRedditName: req.body.subRedditName,
+    twitchQuery: req.body.twitchQuery,
+    youtubeChannelId: req.body.youtubeChannelId,
+    twitterName: req.body.twitterName
+  }}).then(function(response) {
+    var game = JSON.parse(JSON.stringify(response));
+    console.log('SUCCESSFULLY ADDED GAME TO DATABASE:', game);
+    res.send(200, game);
+    // res.sendStatus(200);
+  }).error(function(err) {
+    console.log('CANNOT ADD GAME TO DATABASE DUE TO:', err);
+  });
 });
 
 app.listen(PORT, function() {
