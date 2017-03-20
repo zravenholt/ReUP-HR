@@ -4,6 +4,7 @@ import dbQuery from '../lib/dbQuery.js';
 import Home from './Home.jsx';
 import Explore from '../containers/Explore.jsx';
 import Feed from '../containers/Feed.jsx';
+import AddGame from '../containers/AddGame.jsx';
 
 import {
   HashRouter as Router,
@@ -46,6 +47,7 @@ class App extends React.Component {
               <Redirect from="/" to="/explore" />
               <Route path="/explore" component={Explore} />
               <Route path="/feed" component={Feed} />
+              <Route path="/addgame" component={AddGame} />
             </div>
           </div>
         </div>
