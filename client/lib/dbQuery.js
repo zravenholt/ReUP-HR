@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React from 'react';
 
-const dbQuery = function (tile, query) {
-  var game = query.toLowerCase(); // ignores case sensitivity
-  axios.get('/games/get', { params: { gameName: game } })
+const dbQuery = function (context) {
+  // var game = query.toLowerCase();
+  axios.get('/games/get')
   .then((response) => {
     console.log('GOT GameList BACK FROM dbQuery:', response.data);
-    tile.setState({ myGames: response.data });
-    console.log('myGames state is now set to:', tile.state.myGames);
+    context.setState({ myGames: response.data });
+    console.log('myGames state is now set to:', context.state.myGames);
   }).catch((err) => {
     console.log('Error fetching games from database via dbQuery:', err);
   });
