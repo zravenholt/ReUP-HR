@@ -3,12 +3,11 @@ import React from 'react';
 const IGNNews = ({ content }) => {
   return (
     <div className='container'>
-      <div>{ content.author }</div>
-      <div>{ content.title }</div>
-      <div>{ content.description }</div>
+      <div className='contentTitle'>{ content.title }</div>
+      <img className='contentImage' src={ content.urlToImage } />
+      <div className='contentDescription'>{ content.description } { ` - ${ content.author }`}</div>
       <a href={ content.url }>Read more... </a>
-      <img src={ content.urlToImage } />
-      <div>{ content.publishedAt }</div>
+      {/*<div className='contentDate'>{ content.publishedAt }</div>*/}
     </div>
   );
 }
