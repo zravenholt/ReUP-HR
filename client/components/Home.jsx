@@ -1,19 +1,17 @@
 import React from 'react';
 import dbQuery from '../lib/dbQuery.js';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       myGames: []
     }
   }
-
   componentDidMount () {
     dbQuery(this, 'overwatch');
   }
-
   render() {    
     return (
       <div className="navbar navbar-inverse navbar-fixed-left">
@@ -22,23 +20,15 @@ class Home extends React.Component {
           <h2 className="Title">ReUp</h2>
         </div>
         <div className="User">
-          {/*stuff*/}
         </div>
         <div className="base-navigation">
           <ul>
-            <li><a href>Explore</a></li>
-            <li><a href>Overwatch</a></li>
+            <li><Link to='/explore'>Explore</Link></li>
+            <li><Link to='/feed'>Overwatch</Link></li>
           </ul>
-
-          {/*<div className="user-games">
-             map all games specific to user(currently hardcoded) into this "user-games" div 
-            <h2>Overwatch</h2>
-          </div>*/}
-
         </div>
       </div>
     )
   }
 }
-
 export default Home;
