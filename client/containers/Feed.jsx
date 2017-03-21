@@ -10,13 +10,14 @@ let Feed = (props) => (
     
       <GiantBombTile giantBombName={props.game.giantBombName}/>
     
-      <YoutubeTile youtubeChannelId={props.game.youtubeChannelId}/>
+      <TwitterTile game={props.game}/>
     
       <RedditTile subRedditName={props.game.subRedditName}/>
     
+      <YoutubeTile game={props.game}/>
+
       <TwitchTile twitchQuery={props.game.twitchQuery}/>
     
-      <TwitterTile twitterName={props.game.twitterName}/>
     
   </div>
 );

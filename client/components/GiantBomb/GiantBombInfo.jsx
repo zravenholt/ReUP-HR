@@ -3,7 +3,7 @@ import React from 'react';
 const GiantBombInfo = ({ game, images }) => {
   return (
     <div>
-      <div className="leftmostOfTile"><img src={images.thumb_url} /></div>
+      <div className="leftmostOfTile"><img className="GamePic" src={images.thumb_url} /></div>
       <div><h3>{game.name}</h3></div>
       {/*<div dangerouslySetInnerHTML={ {__html: game.description} } />*/}
       <div>{game.deck}</div>
