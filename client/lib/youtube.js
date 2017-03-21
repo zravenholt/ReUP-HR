@@ -4,7 +4,7 @@ import React from 'react';
 // const game = 'overwatch'; //hardcoded game for now
 
 const fetchYoutube = (tile, channelId) => {
-  axios.get(`https://www.googleapis.com/youtube/v3/search?maxResults=1&key=${keys.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`)
+  axios.get(`https://www.googleapis.com/youtube/v3/search?maxResults=4&key=${keys.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`)
     .then((response) => {
       tile.setState ({
         videos: tile.state.videos.concat(response.data.items)

@@ -19,7 +19,7 @@ class YoutubeTile extends Component {
     return (
       <div className="YoutubeTile">
         <h3>{this.props.game.gameName} on Youtube:</h3>
-        <div className="pre-scrollable">
+        <div className="pre-scrollable postScroller">
         {this.state.videos.map((video) => 
         <YoutubeVideo key={video.id.videoId} video={ video }/>
         )}

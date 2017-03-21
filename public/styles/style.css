@@ -15,6 +15,11 @@
   text-align: center;
 }
 
+.Shroom {
+  margin-top: 20px;
+  max-width: 100px;
+}
+
 .Title {
   color: white;
 }
@@ -35,6 +40,17 @@ img {
 
 .postScroller {
   max-height: 90%;
+  /*border-top: 1px solid #24325E;*/
+  /*border-bottom: 1px solid #24325E;*/
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow:
+    inset 0px 16px 8px -10px #CCC,
+    inset 0px -16px 8px -10px #CCC;
+
+  /*-moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 7px #000000;*/
 }
 
 h3 {
@@ -50,27 +66,30 @@ h3 {
 .GiantBombTile {
   /*margin-top: 0;*/
   /*position: relative;*/
-  border-style: dotted;
-  border-radius: 5px;
-  border-color: darkcyan;
+  border-top: 4px solid #24325E;
+  border-radius: 4px;
   padding: 25px;
   margin: 2%;
   height: 250px;
   overflow-y: hidden;
 }
 
+.GamePic {
+  box-shadow: 6px 6px 2px 2px #ccc;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
 .leftmostOfTile {
   float: left;
-  height: 300px;
-  margin-right: 10px;
+  /*height: 300px;*/
+  margin-right: 15px;
 }
 
 .TwitterTile {
   float: left;
   /*position: relative;*/
-  border-style: dotted;
-  border-radius: 5px;
-  border-color: darkcyan;
+  border-top: 4px solid #24325E;
+  border-radius: 4px;
   padding: 25px;
   margin: 2%;
   height: 75vh;
@@ -81,9 +100,8 @@ h3 {
 .RedditTile {
   float: left;
   /*position: relative;*/
-  border-style: dotted;
-  border-radius: 5px;
-  border-color: darkcyan;
+  border-top: 4px solid #24325E;
+  border-radius: 4px;  
   padding: 25px;
   margin: 2%;
   height: 75vh;
@@ -92,34 +110,33 @@ h3 {
 }
 
 .Post {
-  border-style: solid;
-  border-color: darkcyan;
-  background-color: lightcyan;
+  border-top: 1px solid #24325E;
+  /*border-bottom: 1px solid #24325E;*/
 }
 
 .YoutubeTile {
   margin-top: 0;
   position: relative;
-  border-style: dotted;
-  border-radius: 5px;
-  border-color: darkcyan;
+  border-top: 4px solid #24325E;
+  border-radius: 4px;  
   padding: 25px;
   margin: 2%;
   height: 400px;
   overflow-y: hidden;
 }
 
+.YoutubeEntry {
+  margin-right: 10px;
+}
+
 .TwitchTile {
   float: left;
-  /*position: relative;*/
-  border-style: dotted;
-  border-radius: 5px;
-  border-color: darkcyan;
+  border-top: 4px solid #24325E;
+  border-radius: 4px;  
   padding: 25px;
   margin: 2%;
   width: 96%;
   height: 100%;
-  /*overflow-y: hidden;*/
 }
 
 .container {
@@ -155,8 +172,7 @@ h3 {
 
 .exploreIcon {
   display: block;
-  height: 150px; 
-  width: 150px;
+  max-width: 100px;
   margin: 20px auto;
 }
 
