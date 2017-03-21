@@ -50,10 +50,10 @@ class App extends React.Component {
       <Router>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-2 col-md-2 col-lg-2">
+            <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
               <Home myGames={this.state.myGames} changeGame={this.changeGame}/>
             </div>
-            <div className="col-sm-10 col-md-10 col-lg-10">
+            <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
               <Redirect from="/" to="/explore" />
               <Route path="/explore" component={Explore} />
               <Route path="/feed" component={() => (<Feed game={this.state.currentGame}/>)} />
