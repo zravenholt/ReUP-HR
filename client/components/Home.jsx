@@ -17,13 +17,13 @@ const Home = (props) => (
           <ul className="sidebar-nav">
             <li><Link to="/explore">Explore</Link></li>
             {props.myGames.map((game) => 
-            <li onClick={function (){props.changeGame(game)}}><Link to="/feed">{game.gameName}</Link></li>
+            <li onClick={() => { props.changeGame(game); }}><Link to="/feed">{game.gameName}</Link></li>
             )}
             <li><Link to="/addgame">Add Game...</Link></li>
           </ul>
 
         </div>
       </div>
-    )
+    );
 
 export default Home;

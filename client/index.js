@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
 import App from './components/App.jsx';
-// import Home from './components/Home.jsx';
-// import Explore from './containers/Explore.jsx';
-// import Feed from './containers/Feed.jsx';
+import allReducers from './reducers/reducersIndex.js';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
+
+const store = createStore(allReducers);
 
 
 //provider tag
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render( (<Provider store={store}>
+                                  <App />
+                                </Provider>), document.getElementById('app'));
 
 // /*ReactDOM.render(
 //     <Router>

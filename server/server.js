@@ -49,7 +49,7 @@ const client = new Twitter({
 
 app.get('/twitter', function(req, res) {
   client.get('search/tweets', { q: `from:${req.query.twitterHandle} AND -filter:retweets AND -filter:replies` }, function(error, tweets, response) {
-    if(error) console.log('error in fetching tweets: ', error);
+    if (error) {console.log('error in fetching tweets: ', error);}
     res.send(tweets.statuses);
   });
 });
