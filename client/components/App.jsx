@@ -43,8 +43,6 @@ class App extends React.Component {
     });
   }
 
-
-
   render() {
 
     return (
@@ -52,8 +50,9 @@ class App extends React.Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-              { this.props.games ? <Home myGames={this.props.games} changeGame={this.changeGame}/> : 
-                <Home myGames={this.state.myGames} changeGame={this.changeGame}/>
+              { this.props.games ? 
+                <Home myGames={this.props.games} changeGame={this.changeGame}/> : 
+                <Home myGames={[]} changeGame={this.changeGame}/>
               }
             </div>
             <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
@@ -81,6 +80,3 @@ function mapDispatchToProps (dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-// game={this.state.currentGame} 
-
-/*handler={this.feedWrapper}*/

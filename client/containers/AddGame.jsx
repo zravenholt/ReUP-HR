@@ -56,10 +56,8 @@ class AddGame extends React.Component {
   }
 
   redirectToPage(response) {
-    if(response.status === 200) {
+    if (response.status === 200) {
       console.log('Called redirectToPage successfully with status of 200:', response.data[0].gameName);
-      // window.location.href = `/#/${response.data[0].gameName}`;
-      // window.location.href = '/#/explore';
     } else {
       console.log('Server did not respond back with status code 200:', response.status);
     }
