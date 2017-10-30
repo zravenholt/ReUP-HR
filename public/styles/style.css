@@ -77,6 +77,19 @@ h3 {
   margin-right: 15px;
 }
 
+.MetacriticTile {
+  float: left;
+  border: 0;
+  border-top: 4px solid #24325E; 
+  margin: 2%;
+  width: 96%;
+  height: 75vh;
+}
+
+.MetacriticTitle {
+  
+}
+
 .TwitterTile {
   float: left;
   /*position: relative;*/
