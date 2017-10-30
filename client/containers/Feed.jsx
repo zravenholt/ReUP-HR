@@ -4,19 +4,23 @@ import YoutubeTile from '../components/Youtube/YoutubeTile.jsx';
 import RedditTile from '../components/Reddit/RedditTile.jsx';
 import TwitterTile from '../components/Twitter/TwitterTile.jsx';
 import TwitchTile from '../components/Twitch/TwitchTile.jsx';
+import Metacritic from '../components/Metacritic/metacritic.jsx';
 
-let Feed = ({props}) => (
+let Feed = (props) => (
   <div className="mainView pre-scrollable">
     
-      <GiantBombTile />
+      <GiantBombTile giantBombName={props.game.giantBombName}/>
     
-      <YoutubeTile />
+      <TwitterTile game={props.game}/>
     
-      <RedditTile />
+      <RedditTile subRedditName={props.game.subRedditName}/>
     
-      <TwitchTile />
+      <YoutubeTile game={props.game}/>
+
+      <TwitchTile twitchQuery={props.game.twitchQuery}/>
+
+      {/* <Metacritic game={props.game}/> */}
     
-      <TwitterTile />
     
   </div>
 );

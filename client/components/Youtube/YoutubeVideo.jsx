@@ -8,8 +8,8 @@ const YoutubeVideo = ({ video }) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="row YoutubeEntry">
+      <div className="leftmostOfTile">
         <iframe src={url} allowFullScreen></iframe>
       </div>
       <div>{video.snippet.title}</div>

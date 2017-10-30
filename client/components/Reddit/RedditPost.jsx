@@ -1,15 +1,13 @@
 import React from 'react';
 
 const RedditPost = (props) => {
-  console.log('IN REDDIT POST');
-  console.log('POST: ', props);
 
   if (props.data.thumbnail === 'self') {
     props.data.thumbnail = '../styles/reddit-logo.png';
   }
 
   return (
-    <div>
+    <div className="Post">
       <a href={`http://www.reddit.com${props.data.permalink}`}>
         <div>{props.data.title}</div>
       </a>

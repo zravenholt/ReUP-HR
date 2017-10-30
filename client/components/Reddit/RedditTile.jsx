@@ -15,15 +15,14 @@ class RedditTile extends React.Component {
   }
 
   componentDidMount () {
-    Reddit.getReddit(this, 'Overwatch');
-    console.dir(this.state.posts);
+    Reddit.getReddit(this, this.props.subRedditName);
   }
 
   render () {
     return (
       <div className="RedditTile">
         <h3>Top Reddit Posts</h3>
-        <div className = 'redditPosts pre-scrollable'>
+        <div className = 'pre-scrollable postScroller'>
           {this.state.posts.map((post) => 
             <RedditPost data={post.data}/>
           )}

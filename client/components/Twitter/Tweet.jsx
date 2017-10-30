@@ -2,8 +2,8 @@ import React from 'react';
 
 const Tweet = ({ tweet }) => {
   return (
-    <div>
-      <a href={tweet.entities.urls[0].url}>
+    <div className="Post">
+      <a href={tweet.entities.urls[0] ? tweet.entities.urls[0].url : null}>
         <div>{ tweet.user['screen_name'] }</div>
       </a>
       <div><img src={ tweet.user['profile_image_url_https'] }/></div>

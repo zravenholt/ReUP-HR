@@ -7,17 +7,12 @@ const axios = require('axios');
 const keys = require ('../config/keys.js');
 var request = require('request');
 var db = require('../db/db/db.js');
-var PORT = process.env.PORT || 9001;
+var PORT = process.env.PORT || 8080;
 
-// const giantBombName = 'overwatch';
-// const twitterName = 'playoverwatch';
-
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json, allows response.body to show the retrieved information
 app.use(bodyParser.json());
-
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/bundles', express.static(path.join(__dirname, '../bundles')));
 
@@ -49,23 +44,36 @@ const client = new Twitter({
 
 app.get('/twitter', function(req, res) {
   client.get('search/tweets', { q: `from:${req.query.twitterHandle} AND -filter:retweets AND -filter:replies` }, function(error, tweets, response) {
-    if(error) console.log('error in fetching tweets: ', error);
+    if (error) { console.log('error in fetching tweets: ', error); }
     res.send(tweets.statuses);
   });
 });
 
 app.get('/games/get', function(req, res) {
-
-  console.log('req.query.gameName for /games/get:', req.query.gameName);
-  console.log('db.Game?:', db.Game);
   db.Game.findAll().then(function(games) {
     var gamesList = JSON.parse(JSON.stringify(games));  // converts SQL instance to JSON object
-    console.log('GOT GAMES FROM DATABASE:', gamesList);
     res.send(gamesList);
   }).error(function(err) {
     console.log('CANNOT GET GAMES FROM DATABASE DUE TO:', err);
   });
 
+});
+
+app.post('/games/post', function(req, res) {
+  db.Game.findOrCreate({where: {gameName: req.body.gameName}, defaults: {
+    giantBombName: req.body.giantBombName,
+    subRedditName: req.body.subRedditName,
+    twitchQuery: req.body.twitchQuery,
+    youtubeChannelId: req.body.youtubeChannelId,
+    twitterName: req.body.twitterName
+  }}).then(function(response) {
+    var game = JSON.parse(JSON.stringify(response));
+    console.log('SUCCESSFULLY ADDED GAME TO DATABASE:', game);
+    res.send(200, game);
+    // res.sendStatus(200);
+  }).error(function(err) {
+    console.log('CANNOT ADD GAME TO DATABASE DUE TO:', err);
+  });
 });
 
 app.listen(PORT, function() {

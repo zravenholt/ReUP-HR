@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PolygonNews from './PolygonNews.jsx';
 import fetchPolygonNews from '../../lib/polygon.js';
 import Slider from 'react-slick';
-import PrevArrow from '../Carousel/PrevArrow.jsx';
-import NextArrow from '../Carousel/NextArrow.jsx';
 
 class PolygonExplore extends Component {
   constructor(props) {
@@ -26,21 +24,22 @@ class PolygonExplore extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000
+      autoplaySpeed: 3000,
+      pauseOnHover: true
     }
 
     return (
       <div className='container'>
-        {this.state.contents.length > 0 ?
-          <Slider {...settings}> 
-          {this.state.contents.map((content, index) => (
-            <div data-index={index} key={index}><PolygonNews key={ content.title } content={ content }/></div>
-          ))}
-        </Slider> : null}
+        <p className='PolygonTitle'>POLYGON</p>
+          {this.state.contents.length > 0 ?
+            <Slider {...settings}> 
+            {this.state.contents.map((content, index) => (
+              <div data-index={index} key={index}><PolygonNews key={ content.title } content={ content }/></div>
+            ))}
+          </Slider> : null}
       </div>
     );
   }
 }
 
 export default PolygonExplore;
-

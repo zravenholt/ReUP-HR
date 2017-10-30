@@ -12,14 +12,14 @@ class YoutubeTile extends Component {
   }
 
   componentDidMount() {
-    fetchYoutube(this, 'UClOf1XXinvZsy4wKPAkro2A');
+    fetchYoutube(this, this.props.game.youtubeChannelId);
   }
 
   render() {
     return (
       <div className="YoutubeTile">
-        <h3>Overwatch on Youtube:</h3>
-        <div className="pre-scrollable">
+        <h3>{this.props.game.gameName} on Youtube</h3>
+        <div className="pre-scrollable postScroller">
         {this.state.videos.map((video) => 
         <YoutubeVideo key={video.id.videoId} video={ video }/>
         )}

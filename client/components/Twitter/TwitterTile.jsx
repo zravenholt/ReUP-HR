@@ -12,19 +12,17 @@ class TwitterTile extends React.Component {
   }
 
   componentDidMount() {
-    fetchTweets(this, 'playoverwatch');
+    fetchTweets(this, this.props.game.twitterName);
   }
 
   render() {
     return (
-      <div className="row">
-        <div className="Tile">
-          <h3>Overwatch Twitter Posts:</h3>
-          <div className="pre-scrollable"> 
-          {this.state.tweets.map((tweet) => 
-            <Tweet key={ tweet.id_str } tweet={ tweet }/>
-          )}
-          </div>
+      <div className="TwitterTile">
+        <h3>Twitter Posts</h3>
+        <div className="pre-scrollable postScroller"> 
+        {this.state.tweets.map((tweet) => 
+          <Tweet key={ tweet.id_str } tweet={ tweet }/>
+        )}
         </div>
       </div>
     )
